@@ -1,0 +1,327 @@
+$color-dark-blue: #263238;
+$color-black: black;
+$color-white: white;
+$color-light-gray-1: #c2c2c2;
+$color-light-gray-2: #cccff1;
+$color-dark-gray: #757575;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: black;
+}
+
+// .main {
+//   height: calc(100% - 8rem);
+//   //height can calculate with the function above 100vh minus the height of the menu bar
+//   padding-top: 6rem;
+//   margin: 0 auto;
+// }
+
+.main-nav {
+  display: inline-block;
+  text-align: right;
+  padding: 0.8rem;
+  vertical-align: middle;
+  width: calc(100% - 8rem);
+}
+
+.second-nav {
+  width: 100%;
+  height: 100vh;
+  color: $color-dark-blue;
+  position: relative;
+  margin-top: 10rem;
+
+  &__productsTitle {
+    text-align: center;
+    transform: translateY(-3rem);
+    font-size: 3rem;
+  }
+  .product__image {
+    max-width: 100%;
+    max-height: 100%;
+    width: 14rem;
+    height: 14rem;
+    padding-bottom: 2rem;
+    -webkit-box-shadow: inset -1px 2px 4px 3px #acaeaf, 2px 5px 16px 0px #1e1e1f,
+      -12px -10px 1px -7px rgba(0, 0, 0, 0.09);
+    box-shadow: inset -1px -1px 2px 4px 3px #acaeaf, 2px 5px 16px 0px #1e1e1f,
+      -12px -10px 1px -7px rgba(0, 0, 0, 0.09);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s ease-out;
+    border-radius: 5px;
+    &:active,
+    &:link {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+      transform: translateY(5px);
+    }
+    &:hover {
+      -webkit-box-shadow: 0px 20px 0px -10px #ffffff,
+        0px -20px 0px -10px #ffffff, 20px 0px 0px -10px #ffffff,
+        -20px 0px 0px -10px #ffffff, 0px 0px 0px 3px #ff0000,
+        -26px -31px 1px -22px rgba(0, 0, 0, 0);
+      box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff,
+        20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff,
+        0px 0px 0px 3px #ff0000, -26px -31px 1px -22px rgba(0, 0, 0, 0);
+    }
+  }
+
+  .product__image1 {
+    background-image: url("../images/prod1.jpg");
+  }
+  .product__image2 {
+    background-image: url("../images/prod2.jpg");
+  }
+  .product__image3 {
+    background-image: url("../images/prod3.jpg");
+  }
+  .product__image4 {
+    background-image: url("../images/prod4.jpg");
+  }
+  .product__image5 {
+    background-image: url("../images/prod5.jpg");
+  }
+  .product__image6 {
+    background-image: url("../images/prod6.jpg");
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  &__descriptionImg {
+    font-family: "Roboto", serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+    color: #c2c2c2;
+    letter-spacing: 0.2rem;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+      -1px -1px 0 #000;
+  }
+}
+
+.product-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  gap: 1.5rem;
+  // background: linear-gradient(40deg, #c2c2c2, #263238);
+  min-height: 260px;
+
+  width: 100%;
+
+  &__description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    // margin-top: 1rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+      -1px -1px 0 #000;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.product-category-item {
+  a {
+    display: inline-block;
+    overflow: hidden;
+  }
+  &__common {
+    width: 18rem;
+    height: 18rem;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0.7rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.7s ease-out;
+
+    &:active,
+    &:link {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+      transform: translateY(5px);
+    }
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  .product5-category.product-category {
+    padding-top: 2.5rem !important;
+  }
+  &__first-productS {
+    background-image: url("../images/sznury/1.jpg");
+  }
+  &__second-productS {
+    background-image: url("../images/sznury/2.jpg");
+  }
+  &__third-productS {
+    background-image: url("../images/sznury/3.jpg");
+  }
+  &__forth-productS {
+    background-image: url("../images/sznury/4.jpg");
+  }
+  &__first-productP {
+    background-image: url("../images/profile/1.jpg");
+  }
+  &__second-productP {
+    background-image: url("../images/profile/2.jpg");
+  }
+  &__third-productP {
+    background-image: url("../images/profile/3.jpg");
+  }
+  &__forth-productP {
+    background-image: url("../images/profile/4.jpg");
+  }
+
+  &__first-productT {
+    background-image: url("../images/tasmy/1.jpg");
+  }
+  &__second-productT {
+    background-image: url("../images/tasmy/2.jpg");
+  }
+  &__third-productT {
+    background-image: url("../images/tasmy/3.jpg");
+  }
+  &___first-productS {
+    background-image: url("../images/sealant/1.jpg");
+  }
+  &__first-productZ {
+    background-image: url("../images/zestawy/1.jpg");
+  }
+  &__second-productZ {
+    background-image: url("../images/zestawy/2.jpg");
+  }
+  &__first-productK {
+    background-image: url("../images/klej/1.jpg");
+  }
+
+  //subcategory images
+  .sznuryS__first {
+    background-image: url("../images/sznury/sub/1.jpg");
+  }
+  .sznuryS__second {
+    background-image: url("../images/sznury/sub/2.jpg");
+  }
+  .sznuryZ__first {
+    background-image: url("../images/sznury/sub/Z/1.jpg");
+  }
+  .sznuryZ__second {
+    background-image: url("../images/sznury/sub/Z/2.jpg");
+  }
+  .TasmyS__first {
+    background-image: url("../images/tasmy/sub/TS/1.jpg");
+  }
+  .TasmyS__second {
+    background-image: url("../images/tasmy/sub/TS/2.jpg");
+  }
+  .TasmyS__third {
+    background-image: url("../images/tasmy/sub/TS/3.jpg");
+  }
+
+  .TasmyTK__first {
+    background-image: url("../images/tasmy/sub/TK/tk_jedno_parent.jpg");
+  }
+  .TasmyTK__second {
+    background-image: url("../images/tasmy/sub/TK/tk_dwu_parent.jpg");
+  }
+  .TasmyJedno__first {
+    background-image: url("../images/tasmy/sub/TK/jedno/tasmy_szklana_jedno.jpg");
+  }
+  .TasmyJedno__second {
+    background-image: url("../images/tasmy/sub/TK/jedno/tasmy_bazaltowa_jedno.jpg");
+  }
+  .PPrz__first {
+    background-image: url("../images/profile/sub/PP/1.jpg");
+  }
+  .PPrz__second {
+    background-image: url("../images/profile/sub/PP/2.jpg");
+  }
+  .standard__first {
+    background-image: url("../images/zestawy/sub/standard/1.jpg");
+  }
+  .standard__second {
+    background-image: url("../images/zestawy/sub/standard/2.jpg");
+  }
+  .premium__first {
+    background-image: url("../images/zestawy/sub/premium/1.jpg");
+  }
+  .premium__second {
+    background-image: url("../images/zestawy/sub/premium/2.jpg");
+  }
+}
+
+//The class for the horizontal title of the products category
+
+.full {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem 0;
+  background-image: linear-gradient(
+    45deg,
+    rgb(19, 47, 85) 25%,
+    rgb(64, 60, 85) 46%
+  );
+
+  width: 100%;
+}
+
+.products__title {
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .languages {
+    display: block !important;
+    position: absolute !important;
+    top: 5rem !important;
+    right: -0.4rem !important;
+    z-index: 999 !important;
+  }
+  .hamburger-menu {
+    top: 3rem !important;
+  }
+  img.naglowek-logo-dwa {
+    padding-right: 6px !important;
+  }
+}
